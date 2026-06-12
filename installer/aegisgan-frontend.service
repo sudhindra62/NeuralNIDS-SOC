@@ -1,0 +1,16 @@
+[Unit]
+Description=AegisGAN React Frontend Service
+After=network.target
+
+[Service]
+User=root
+WorkingDirectory=/opt/aegisgan/frontend
+Environment="PATH=/usr/bin:/usr/local/bin"
+# Production typically serves via Nginx or serves the build directory with a simple server
+# For simplicity in this standalone package, we'll use `npm run preview` or serve.
+ExecStart=/usr/bin/npm run preview -- --host 0.0.0.0 --port 5173
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target

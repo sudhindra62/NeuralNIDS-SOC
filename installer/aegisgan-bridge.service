@@ -1,0 +1,15 @@
+[Unit]
+Description=AegisGAN Zeek Log Bridge Service
+After=network.target aegisgan-backend.service
+
+[Service]
+User=root
+WorkingDirectory=/opt/aegisgan
+Environment="PATH=/opt/aegisgan/venv/bin"
+# Uses the zeek log path in standard linux installs
+ExecStart=/opt/aegisgan/venv/bin/python bridge/socket_sender.py --path /usr/local/zeek/logs/current/conn.log --host 127.0.0.1 --port 9000
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

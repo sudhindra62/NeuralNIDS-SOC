@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+websockets
+tensorflow
+pandas
+scikit-learn
+numpy
+python-multipart
+aiofiles
+pathlib

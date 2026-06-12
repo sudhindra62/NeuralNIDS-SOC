@@ -1,0 +1,14 @@
+[Unit]
+Description=AegisGAN Database Microservice
+After=network.target aegisgan-backend.service
+
+[Service]
+User=root
+WorkingDirectory=/opt/aegisgan
+Environment="PATH=/opt/aegisgan/venv/bin"
+ExecStart=/opt/aegisgan/venv/bin/python db_microservice/main.py
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
