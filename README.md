@@ -1,6 +1,6 @@
 # AegisGAN_live: Real-Time NIDS-SOC Streaming System
 
-A production-style Network Intrusion Detection System using Zeek for traffic capture, FastAPI for backend streaming, and React for a real-time SOC dashboard.
+A production-style Network Intrusion Detection System (NIDS) that integrates Zeek for real-time network traffic capture, a Generative Adversarial Network (GAN) for synthetic data generation and dataset augmentation, and a CNN-LSTM-based deep learning model for intrusion detection. The system is powered by a FastAPI backend for real-time inference and streaming, and a React-based SOC dashboard that provides live visualization of network activity and security alerts.
 
 ## Architecture
 `Zeek (WSL) -> Bridge (Socket) -> Backend (ML Pipeline) -> React Dashboard (WebSocket)`
