@@ -45,7 +45,7 @@ python bridge/socket_sender.py --path zeek_ws/logs/conn.log --host 127.0.0.1 --p
 ## ML Pipeline
 - **Window Size (T)**: 30 flows
 - **Features**: 15 (strict parity with training)
-- **Model**: `final_model96.keras`
+- **Model**: `final_model96.keras`.
 
 
 .\start_all.bat
